@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="memory.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Memoire.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <title>Memory</title>
+</head>
+<body id="body">
+    <div class="all">
+        <select name="fond" id="fond" onchange="choixFond()">
+            <option value="fond_01">Fond 01</option>
+            <option value="fond_02">Fond 02</option>
+            <option value="fond_03">Fond 03</option>
+        </select>
+        <h1><img class="titre" src="image/titre.png" alt="#"></h1>
+        <div id="victory"></div>
+        <table id="tableau">
+            <tr class="hight">
+                <td onmouseover="auDessus('0')" onmouseleave="enDehord('0')" id="0" onclick="gameplay('0')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('1')" onmouseleave="enDehord('1')" id="1" onclick="gameplay('1')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('2')" onmouseleave="enDehord('2')" id="2" onclick="gameplay('2')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('3')" onmouseleave="enDehord('3')" id="3" onclick="gameplay('3')"><img src="image/merry.png" alt="#"></td >
+            </tr>
+            <tr class="medium">
+                <td  onmouseover="auDessus('4')" onmouseleave="enDehord('4')" id="4" onclick="gameplay('4')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('5')" onmouseleave="enDehord('5')" id="5" onclick="gameplay('5')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('6')" onmouseleave="enDehord('6')" id="6" onclick="gameplay('6')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('7')" onmouseleave="enDehord('7')" id="7" onclick="gameplay('7')"><img src="image/merry.png" alt="#"></td >
+            </tr>
+            <tr class="bottom">
+                <td onmouseover="auDessus('8')" onmouseleave="enDehord('8')" id="8" onclick="gameplay('8')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('9')" onmouseleave="enDehord('9')" id="9" onclick="gameplay('9')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('10')" onmouseleave="enDehord('10')" id="10" onclick="gameplay('10')"><img src="image/merry.png" alt="#"></td >
+                <td onmouseover="auDessus('11')" onmouseleave="enDehord('11')" id="11" onclick="gameplay('11')"><img src="image/merry.png" alt="#"></td >
+            </tr>
+        </table>
+        <div class="trucEnBas">
+            <img class="texte" src="image/texte.png" alt="#">
+            <input type="text" name="nb" id="nb" placeholder="0"> <br><br>
+            <button onmouseover="btnHover('boutton')" onmouseleave="btnNonHover('boutton')" onclick="again()"><img id="boutton" src="image/boutton_noir.png" alt=""></button>
+        </div>
+        <select name="musique" id="musiq" onchange="choixMusique('ost')">
+            <optgroup label="Naruto's Ost">
+                <option value="1" id="01">Sadness And Sorrow</option>
+                <option value="2" id="02">Spin And Bust</option>
+                <option value="3" id="03">Strong And Strike</option>
+            </optgroup>
+            <optgroup label="One Piece's Ost">
+                <option value="4" id="04">The VerY Very Very Strong</option>
+                <option value="5" id="05">Overtaken</option>
+                <option value="6" id="06">Fierce Attack</option>
+                <option value="7" id="07">We Are</option>
+            </optgroup>
+            <optgroup label="Autres">
+                <option value="8" id="08">To Give A Marionette Life</option>
+                <option value="9" id="09">Next toYou</option>
+            </optgroup>
+        </select>
+        <audio controls id="ost" autoplay>
+            <source id="srcOst" src="musique/Strong and Strike.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+</html>
